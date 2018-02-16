@@ -1,0 +1,44 @@
+<div id="custom-overlay" [style.display]="splash ? 'flex': 'none' ">
+  <div  class ="flb">
+    <div class="Aligner-item Aligner-item--top"></div>
+      <img src="../../assets/lofa.PNG"/>
+      <div class="Aligner-item Aligner-item--bottom"></div>
+    </div>
+  </div>
+  
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header>
+      Urban Trade
+     </ion-card-header>
+
+          <ion-card-content>
+               <ion-list no-line>
+                 <div class="spacer" style="height:5px"></div>
+                 <ion-item>
+                   <ion-input color="danger" input="text" type="email" placeholder="email" [(ngModel)]="credentials.email" ></ion-input>
+                 </ion-item>
+
+                 <ion-item>
+                    <ion-input color="danger" input="password" type="password" placeholder="password" [(ngModel)]="credentials.password" ></ion-input>
+                  </ion-item>
+                  <p>
+                   <ion-item>
+                    <ion-label>remember password</ion-label>
+                    <ion-checkbox color="default" checked="true"></ion-checkbox>
+                  </ion-item>
+                  <a (click)="passwordreset()">password reset</a>
+                </p>
+
+                  <button class="bur" ion-button block outline color="clear" (click)="signin()">log in</button>
+
+                  <p>or</p>
+
+                  <button ion-button block color="facebook">
+                   <ion-icon name="logo-facebook"></ion-icon> login with facebook
+                  </button>
+               </ion-list>
+          </ion-card-content>
+  <button class="bottom" ion-button clear full color="danger" (click)="signup()" >don't have an account sign up</button>
+   </ion-card>
+</ion-content>
